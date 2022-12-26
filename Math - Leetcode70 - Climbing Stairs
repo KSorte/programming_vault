@@ -2,7 +2,7 @@
 
 Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?  */
 
-// Essentially finding nth term of Fibonacci Series. https://www.youtube.com/watch?v=Y0lT9Fck7qI
+// Similar to finding nth term of Fibonacci Series. Except that the starting terms are 1 and 1 rather than 0 and 1. https://www.youtube.com/watch?v=Y0lT9Fck7qI
 class Solution {
 public:
     int climbStairs(int n) {
