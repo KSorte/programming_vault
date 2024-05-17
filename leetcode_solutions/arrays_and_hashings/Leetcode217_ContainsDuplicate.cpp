@@ -1,22 +1,23 @@
 #include<iostream>
 #include<unordered_set>
 #include<vector>
+
+/**
+ * @brief Given an integer array nums, return true if any value appears at least twice in the array,
+ * and return false if every element is distinct.
+ *
+ * This function iterates through the given integer array and uses an unordered set
+ * to track elements that have been seen. If an element is found in the set, it means
+ * the element is a duplicate and the function returns true. Otherwise, it inserts
+ * the element into the set and continues. If no duplicates are found after checking
+ * all elements, the function returns false.
+ *
+ * @param nums The vector of integers to check for duplicates.
+ * @return True if any value appears at least twice in the array, otherwise false.
+ */
+
 class Solution {
 public:
-
-    /**
-     * @brief Given an integer array nums, return true if any value appears at least twice in the array,
-     * and return false if every element is distinct.
-     *
-     * This function iterates through the given integer array and uses an unordered set
-     * to track elements that have been seen. If an element is found in the set, it means
-     * the element is a duplicate and the function returns true. Otherwise, it inserts
-     * the element into the set and continues. If no duplicates are found after checking
-     * all elements, the function returns false.
-     *
-     * @param nums The vector of integers to check for duplicates.
-     * @return True if any value appears at least twice in the array, otherwise false.
-     */
     bool containsDuplicate(std::vector<int>& nums) {
     // An unordered set to store iterated from nums.
     std::unordered_set<int> numset;
