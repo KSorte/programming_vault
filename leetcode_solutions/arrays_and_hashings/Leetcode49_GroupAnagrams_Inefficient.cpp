@@ -72,9 +72,10 @@ public:
         for (const auto str : strs){
             if(anagram_strs.size() == 0){
                 // If anagram_strs size  = 0, create new anagram and add string to it.
-                std::vector<std::string> anagrams;
-                anagrams.emplace_back(str);
-                anagram_strs.emplace_back(anagrams);
+                // std::vector<std::string> anagrams;
+                // anagrams.emplace_back(str);
+                // anagram_strs.emplace_back(anagrams);
+                anagram_strs.emplace_back(std::vector<std::string>{str});
                 continue;
             }
             for (auto & vector : anagram_strs){
