@@ -7,9 +7,10 @@ For example, do not use pow(x, 0.5) in c++ or x ** 0.5 in python. */
 // signed int limit : 2147483647. Max square root : 46341
 class Solution {
 public:
-    int mySqrt(int x) {
+    int mySqrt( int x )
+    {
         int i = 0;
-        while(i<46341 && i*i <= x){i ++;}
-        return i-1; 
+        while ( i < 46341 && i * i <= x ) { i++; }
+        return i - 1;
     }
 };

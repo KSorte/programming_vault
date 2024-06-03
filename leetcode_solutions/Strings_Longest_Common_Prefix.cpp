@@ -1,0 +1,47 @@
+class Solution {
+public:
+    string longestCommonPrefix( vector<string>& strs )
+    {
+        string commonPrefix = "";
+        string word;
+        int    sizeV = strs.size();
+        char   letter;
+        char   letter1;
+        int    flag1 = 0; // for checking common letter
+        int    flag2 = 0; // for checking word size limit
+        int    flagE = 0;
+        int    c     = 0;
+
+        // Dealing with vector of empty strings
+        for ( int i = 0; i < sizeV; i++ )
+        {
+            if ( strs[i] != "" ) { flagE = 1; break; }
+            else { continue; } }
+        if ( flagE == 0 ) { return ""; } // if empty vector or vector of empty strings, return ""
+
+        while ( flag1 == 0 && flag2 == 0 )
+        {
+            word    = strs[0];
+            letter1 = word[c];
+            //cout<<letter1;
+            if ( c + 1 >= word.size() ) { flag2 = 1; }
+
+            for ( int i = 1; i < sizeV; i++ )
+            {
+                word   = strs[i];
+                letter = word[c];
+                if ( c + 1 == word.size() ) { flag2 = 1; }
+                if ( letter == letter1 ) { continue; }
+                else { flag1 = 1; break; } // Break for-loop if letter not matching
+            }
+
+            cout << commonPrefix << endl;
+            if ( flag1 == 0 )
+            {
+                commonPrefix += letter1; //cout<<commonPrefix;
+            } // Adding letter to commonPrefix
+            c++;                         //Updating while loop counter
+        }
+        return commonPrefix;
+    };
+};
