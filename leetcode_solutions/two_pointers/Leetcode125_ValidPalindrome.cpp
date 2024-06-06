@@ -7,6 +7,9 @@
  * removing all non-alphanumeric characters, it reads the same forward and backward.
  * Alphanumeric characters include letters and numbers.
  *
+ * This is a first of a class of problems that need two iterators to traverse an array to solve
+ * the problem.
+ *
  * Steps:
  * 1. Initialize two iterators one from the left (i) and another from the right(j)
  * 2. While loop (i < j)
