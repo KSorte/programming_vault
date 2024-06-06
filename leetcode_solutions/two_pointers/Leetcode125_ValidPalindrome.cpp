@@ -1,4 +1,4 @@
-#include<iostream>
+#include <iostream>
 #include <string>
 #include <vector>
 
@@ -13,8 +13,8 @@
  * Steps:
  * 1. Initialize two iterators one from the left (i) and another from the right(j)
  * 2. While loop (i < j)
-    * i. if s(i) is not alphanumeric, i ++; do this in a loop until i < j.
-    * ii. if s(j) is not alphanumeric, j --; do this in a loop until i < j.
+    * i. if s(i) is not alphanumeric, i++; do this in a loop until i < j.
+    * ii. if s(j) is not alphanumeric, j--; do this in a loop until i < j.
     * iii. if lower case (s[i]) is not equal to lower case s[j], return false;
     * else i++ and j--.
  * Return True
