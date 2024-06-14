@@ -95,6 +95,11 @@ This solution even though having comparable time complexity to the previous one 
 because I suspect it doesn't have to create maps, sets or insert elements in them. This adds an additional
 overhead in the above solution making it slow.
 
+Downside of below is the fixed size of arrays.
+Downside of above is that hashtables can be cumbersome for large n.
+
+o(1) lookup of arrays is slightly faster than the same in hash maps in practice.
+
 class Solution {
 public:
     bool isValidSudoku(vector<vector<char>>& board) {
