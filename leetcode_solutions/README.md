@@ -5,3 +5,5 @@ This problem even though using a stack is more significantly belonging to one of
 Leetcode 128 - Longest Consecutive Sequence : Was a hard crack, the trick is very nuanced and may not strike immediately.
 
 Leetcode 853 : Did not need the usage of stacks. The trick did not strike organically.
+
+Leetcode 84 - Did not need stacks.
