@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 /*
+    Leetcode 84 Largest Rectangle in Histogram.
     https://medium.com/algorithms-digest/largest-rectangle-in-histogram-234004ecd15a
     Given an array of integers heights representing the histogram's bar height where
     the width of each bar is 1, return the area of the largest rectangle in the histogram.
@@ -97,6 +98,7 @@ public:
         for (int i = 0; i < n; i++){
             auto curr_rect =
                 (rectangle_limits[i].second - rectangle_limits[i].first - 1)*heights[i];
+            // If current rectangle is larger than max rectangle area, update the latter.
             max_rectangle_area = (curr_rect > max_rectangle_area) ? curr_rect : max_rectangle_area;
         }
     return max_rectangle_area;
