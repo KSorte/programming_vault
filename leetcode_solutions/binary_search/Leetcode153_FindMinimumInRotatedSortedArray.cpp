@@ -22,12 +22,13 @@
     First designate the left most as the minimum.
     Steps inside a classic Binary search loop.
     1. Check if L and R are in a sorted portion (L <= R)
-        If yes, assign left to min.
+        If yes, assign left to min. break;
     2. Calculate middle
-    if middle is at a peak -> min =  middle + 1
-    if middle is at a valley -> min =  middle
+        if middle is at a peak -> min =  middle + 1 -> break;
+        if middle is at a valley -> min =  middle -> break;
     2. If M is in left portion (M >= L):
         we need to search right. L = M + 1
+        continue;
     3. if M is in right portion (M < L)
         We need to search left. R = M - 1
 
