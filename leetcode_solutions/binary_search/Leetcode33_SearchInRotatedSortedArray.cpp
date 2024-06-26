@@ -21,6 +21,17 @@ Solution 1: O(log(n)), find minimum first.
 
 Solution 2: Get target directly. Neetcode solution
 
+2 broad cases:
+    middle on the left portion
+    - This also has 2 cases:
+        target on the left portion AND target < mid -> high = mid - 1
+     ELSE (when target is either on the right portion or > mid) -> low = mid + 1
+
+    middle on the right portion
+    - This also has 2 cases:
+        target on the right portion AND target > mid -> low = mid + 1
+     ELSE (when target is either on left portion or < mid) -> high = mid - 1
+
 class Solution {
 public:
     int search(vector<int>& nums, int target) {
