@@ -31,9 +31,26 @@ struct TreeNode {
     // Pointer to right child.
     TreeNode *right;
 
-    // Three constructors.
+    /**
+     * @brief Constructor of TreeNode struct.
+     * Initializes val, left and right.
+     */
     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+
+    /**
+     * @brief Constructor of TreeNode struct.
+     * Initializes val, left and right.
+     * @param x Integer for initializing val.
+     */
     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+
+    /**
+     * @brief Constructor of TreeNode struct.
+     * Initializes val, left and right.
+     * @param x Integer for initializing val.
+     * @param *left Pointer to the left child of the node.
+     * @param *right Pointer to the right child of the node.
+     */
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
 
