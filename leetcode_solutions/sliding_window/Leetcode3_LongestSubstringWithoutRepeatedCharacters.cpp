@@ -4,7 +4,7 @@
 
 /*
 
-    Leetcode 3 Longest Substring Without Duplicates.
+    Leetcode 3 Longest Substring Without Repeated Characters.
     Given a string s, find the length of the longest substring without repeating characters.
 
     Two pointer approach - sliding window
