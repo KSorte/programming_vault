@@ -1,7 +1,5 @@
 #include <algorithm>
 #include <iostream>
-#include <queue>
-#include <stack>
 #include <vector>
 
 /*
@@ -15,7 +13,7 @@ The length of a path between two nodes is represented by the number of edges bet
 
 Create DFS function that gets the depth of from a node.
 Apply DFS on each child (left and right) and get its depth.
-Then calculate the diameter of the tree as 2 + left child depth + right child depth.
+Then calculate the diameter of the tree as left child depth + right child depth.
 Update the diameter variable declared in the class.
 Return the max(left child depth, right child depth) + 1 from the DFS function.
 
@@ -67,11 +65,10 @@ public:
      * @returns Integer diameter of the tree.
      */
     int diameterOfBinaryTree(TreeNode* root) {
+        // If root pointer non existent, return -1.
         if (!root) { return -1;}
 
         diameter = 0;
-        // int diameter = 0;
-        // dfs(root, diameter);
         dfs(root);
         return diameter;
     }
@@ -83,6 +80,7 @@ public:
      */
     int dfs(TreeNode* root) {
 
+        // If root is a null pointer, return depth as 0.
         if (!root) { return 0;}
 
         // Get the depth of the left and right nodes.

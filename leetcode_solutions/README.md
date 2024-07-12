@@ -7,3 +7,5 @@ Leetcode 128 - Longest Consecutive Sequence : Was a hard crack, the trick is ver
 Leetcode 853 : Did not need the usage of stacks. The trick did not strike organically.
 
 Leetcode 84 - Did not need stacks.
+
+Leetcode 543 Diameter of Binary Tree and Leetcode 110 Balanced Binary Tree used DFS with recursion. Very peculiar technique.
