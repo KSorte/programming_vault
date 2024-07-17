@@ -1,3 +1,4 @@
+#include <memory>
 #include <string>
 #include <unordered_map>
 
@@ -39,10 +40,10 @@ public:
     /**
      * @brief Constructor for the TrieNode Class.
      */
-    TrieNode() : is_end_of_word(false), children_map({}){};
+    TrieNode() : is_end_of_word(false) {};
 
     // Unordered map mapping from character to TrieNode object for children.
-    std::unordered_map<char, TrieNode*> children_map;
+    std::unordered_map<char, std::unique_ptr<TrieNode>> children_map;
 
     // Boolean indicating if the node is the end of a word.
     bool is_end_of_word;
@@ -54,7 +55,7 @@ public:
      * @brief Constructor for the Trie Class.
      */
     Trie() {
-        root = new TrieNode();
+        root = std::make_unique<TrieNode>();
     }
 
     /**
@@ -62,17 +63,20 @@ public:
      * @param word String word to be inserted.
      */
     void insert(std::string word) {
-        auto current_node = root;
+        // auto current_node = root;
+        auto current_node = root.get();  // Method to get raw pointer from the unique pointer.
         for (auto & letter : word) {
             // Search for letter in the children of the current node.
             auto iterator_to_letter = current_node->children_map.find(letter);
 
             // If not found.
             if (iterator_to_letter == current_node->children_map.end()) {
-                current_node->children_map[letter] = new TrieNode();
+                // current_node->children_map[letter] = new TrieNode;
+                current_node->children_map[letter] = std::make_unique<TrieNode>();
             }
 
-            current_node = current_node->children_map[letter];
+            // current_node = current_node->children_map[letter];
+            current_node = current_node->children_map[letter].get();
         }  // End of for loop for word insertion.
         current_node->is_end_of_word = true;
     }
@@ -83,7 +87,7 @@ public:
      * @returns Boolean indicating whether the word exists in the Trie.
      */
     bool search(std::string word) {
-        auto current_node = root;
+        auto current_node = root.get();
         for (auto & letter : word) {
             // Search for letter in the children of the current node.
             auto iterator_to_letter = current_node->children_map.find(letter);
@@ -93,7 +97,7 @@ public:
                 return false;
             }
 
-            current_node = current_node->children_map[letter];
+            current_node = current_node->children_map[letter].get();
         }  // End of for loop for word search.
 
         return current_node->is_end_of_word;
@@ -105,7 +109,7 @@ public:
      * @returns Boolean indicating whether a word starting with the prefix exists.
      */
     bool startsWith(std::string prefix) {
-        auto current_node = root;
+        auto current_node = root.get();
         for (auto & letter : prefix) {
             // Search for letter in the children of the current node.
             auto iterator_to_letter = current_node->children_map.find(letter);
@@ -115,7 +119,7 @@ public:
                 return false;
             }
 
-            current_node = current_node->children_map[letter];
+            current_node = current_node->children_map[letter].get();
         }  // End of for loop for word search with prefix.
 
         return true;
@@ -123,7 +127,7 @@ public:
 
 private:
     // Root of the prefix tree.
-    TrieNode* root;
+    std::unique_ptr<TrieNode> root;
 };
 
 /**

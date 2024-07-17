@@ -1,4 +1,4 @@
-Note:
+## Good Problems
 Problem 22 Generate Parentheses needs be revisited during Backtracking, Decision Trees, Recursion and Tree Search.
 This problem even though using a stack is more significantly belonging to one of the above groups.
 
@@ -16,3 +16,9 @@ It is recalculated currently by iterating over the map.
 
 Leetcode 200 Number of Islands is a very important problem asked in many coding rounds.
 It is solved with both DFS and BFS. Must read for understanding these two searches properly.
+
+Leetcode 208 Implement Trie Prefix Tree : This is a good problem for application of unique pointers as against
+raw pointers. Methods such as `make_unique()` to create new instance of unique pointer and `get()` to get raw pointers from unique ptrs are used in this solution.
+No usage of pointers lead to problems with the hashmaps since they copy the class elements and lead to
+heap-use-after-free error.
+This is a problem worth studying to understand when to use and not use pointers.
