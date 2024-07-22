@@ -32,6 +32,8 @@
 */
 
 // TODO(KSorte): Use Smart Pointers.
+// TODO(KSorte): Use Path Compression in Union Find.
+// TODO(KSorte): Create headers and assign separate repository.
 class ConnectionNode {
 public:
     /**
@@ -92,10 +94,7 @@ public:
     NoteEquivalence(std::vector<std::pair<std::string, std::string>> word_associations) :
         word_associations(word_associations) {
             group_data();
-        }
-
-    // Map to store the word associations.
-    std::unordered_map<std::string, ConnectionNode*> map_of_existing_words;
+    }
 
     /**
      * @brief Determines if the two sentences are equivalent or not based on the word associations
@@ -126,6 +125,10 @@ public:
         }
         return groups_in_sentence_1 == groups_in_sentence_2;
     }
+
+    // Map to store the word associations.
+    // TODO(KSorte): Move to private, brought here for testing.
+    std::unordered_map<std::string, ConnectionNode*> map_of_existing_words;
 private:
     // Associations of words.
     std::vector<std::pair<std::string, std::string>> word_associations;
