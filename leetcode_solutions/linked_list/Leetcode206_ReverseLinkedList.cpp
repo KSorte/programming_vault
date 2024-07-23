@@ -14,10 +14,28 @@ In a single iteration you are altering connections from <- P C->N to <-P<-C<-N
 
 //  Definition for singly-linked list.
 struct ListNode {
+    // Value of the list node.
     int val;
+
+    // Raw Pointer to the next ListNode.
     ListNode *next;
+
+    /**
+     * @brief Constructor.
+     */
     ListNode() : val(0), next(nullptr) {}
+
+    /**
+     * @brief Constructor.
+     * @param x Integer value.
+     */
     ListNode(int x) : val(x), next(nullptr) {}
+
+    /**
+     * @brief Constructor.
+     * @param x Integer value.
+     * @param next ListNode* pointer to next node.
+     */
     ListNode(int x, ListNode *next) : val(x), next(next) {}
 };
 
