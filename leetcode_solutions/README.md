@@ -10,6 +10,8 @@ Leetcode 84 - Did not need stacks.
 
 Leetcode 543 Diameter of Binary Tree and Leetcode 110 Balanced Binary Tree used DFS with recursion. Very peculiar technique.
 
+Leetcode 33 Search in Rotated Sorted array - From Blind 75. Took a long time to crack.
+
 Leetcode 424 Longest Repeating Character Replacement: Most important from the sliding window section;
 Count of the most occuring letter after moving the left pointer need not be recalculated.
 It is recalculated currently by iterating over the map.
@@ -25,3 +27,6 @@ This is a problem worth studying to understand when to use and not use pointers.
 
 Leetcode 211 Design. Add and Search Words Data Structure. This is part of the Blind 75 list and is an extremely important extension of the
 Leetcode 208. It employs a very canny implementation of DFS. It is worth trying to dry run the algorithm over and over to understand how it works. KEY: Understand the problem first.
+
+Leetcode 143 Reorder List: Important learning - When dealing with pointers use while loops using nullptr conditions rather than
+for loops which can cause nullptr errors.
