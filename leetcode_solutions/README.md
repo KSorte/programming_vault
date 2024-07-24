@@ -22,3 +22,6 @@ raw pointers. Methods such as `make_unique()` to create new instance of unique p
 No usage of pointers lead to problems with the hashmaps since they copy the class elements and lead to
 heap-use-after-free error.
 This is a problem worth studying to understand when to use and not use pointers.
+
+Leetcode 211 Design. Add and Search Words Data Structure. This is part of the Blind 75 list and is an extremely important extension of the
+Leetcode 208. It employs a very canny implementation of DFS. It is worth trying to dry run the algorithm over and over to understand how it works. KEY: Understand the problem first.
