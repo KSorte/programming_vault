@@ -30,3 +30,7 @@ Leetcode 208. It employs a very canny implementation of DFS. It is worth trying 
 
 Leetcode 143 Reorder List: Important learning - When dealing with pointers use while loops using nullptr conditions rather than
 for loops which can cause nullptr errors.
+
+Leetcode 133 Clone Graph: Important learning - Do not assume that the graph is a tree. This problem the graph was bidirectional.
+Which meant that in a BFS algorithm even if you have visited a neighbor before, the current node can still form a connection.
+Trick: BFS with a map pointing from old node to new.
