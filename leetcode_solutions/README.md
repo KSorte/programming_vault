@@ -1,4 +1,4 @@
-## Good Problems
+## Notes
 Problem 22 Generate Parentheses needs be revisited during Backtracking, Decision Trees, Recursion and Tree Search.
 This problem even though using a stack is more significantly belonging to one of the above groups.
 
@@ -19,6 +19,9 @@ It is recalculated currently by iterating over the map.
 Leetcode 100, 104, 110, 226, 543 and 572 - Easy leetcodes from the `Trees` section. An excellent set of problems for understanding
 binary tree traversal and most importantly RECURSION. Each of these problems hinge on a single trick. Some form of bfs or dfs
 The latter gives a rich understanding of recursion. Very very important set of problems.
+
+Leetcode 235 Lowest Common Ancestor in BST - the key thing to understand is that the BST is valid. This helps in understanding that
+nullptr errors wont occur.
 
 Leetcode 200 Number of Islands is a very important problem asked in many coding rounds.
 It is solved with both DFS and BFS. Must read for understanding these two searches properly.
