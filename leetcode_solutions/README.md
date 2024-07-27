@@ -16,6 +16,10 @@ Leetcode 424 Longest Repeating Character Replacement: Most important from the sl
 Count of the most occuring letter after moving the left pointer need not be recalculated.
 It is recalculated currently by iterating over the map.
 
+Leetcode 100, 104, 110, 226, 543 and 572 - Easy leetcodes from the `Trees` section. An excellent set of problems for understanding
+binary tree traversal and most importantly RECURSION. Each of these problems hinge on a single trick. Some form of bfs or dfs
+The latter gives a rich understanding of recursion. Very very important set of problems.
+
 Leetcode 200 Number of Islands is a very important problem asked in many coding rounds.
 It is solved with both DFS and BFS. Must read for understanding these two searches properly.
 
