@@ -1,4 +1,7 @@
 ## Notes
+With hindsight, Two Pointers, Sliding Window and Binary Search were most difficult to solve.
+However, trees, graphs and linked list problems all rely on a finite class of tricks.
+
 Problem 22 Generate Parentheses needs be revisited during Backtracking, Decision Trees, Recursion and Tree Search.
 This problem even though using a stack is more significantly belonging to one of the above groups.
 
