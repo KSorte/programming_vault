@@ -2,6 +2,9 @@
 With hindsight, Two Pointers, Sliding Window and Binary Search were most difficult to solve.
 However, trees, graphs and linked list problems all rely on a finite class of tricks.
 
+Slow fast pointer technique in linked list: Leetcode 141, 143(I haven't used it, one can here), and Leetcode 19 use two pointers
+fast and slow to achieve their ends. A classic technique.
+
 Problem 22 Generate Parentheses needs be revisited during Backtracking, Decision Trees, Recursion and Tree Search.
 This problem even though using a stack is more significantly belonging to one of the above groups.
 
