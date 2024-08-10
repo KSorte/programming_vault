@@ -5,7 +5,7 @@
 
 /*
 Author: Kaushal Atul Sorte
-Email: sorte.K@northeastern.edu
+Email: sorte.k@northeastern.edu
 Compile with:
 g++ -std=c++17 -O2 -Wall -Wextra -o convolution /filepath/convolution.cpp
 
