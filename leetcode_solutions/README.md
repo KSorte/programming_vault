@@ -48,6 +48,9 @@ Leetcode 133 Clone Graph: Important learning - Do not assume that the graph is a
 Which meant that in a BFS algorithm even if you have visited a neighbor before, the current node can still form a connection.
 Trick: BFS with a map pointing from old node to new.
 
-Leetcode 78 Subsets: Was a tough introduction to backtracking. Solution not intuitive.
+Leetcode 78 Subsets, Leetcode 39 Combination Sum: Was a tough introduction to backtracking. Solution not intuitive.
 Use recursive DFS for searching all possible subsets. "children" of a node are actually decisions
 about whether to add a node to a subset being constructed.
+
+Note the DFS function where the efficiency depends on whether you are passing the current combination or subset by reference or
+by value to the DFS function. The former is also much more efficient. Both algos are slightly different.
