@@ -59,5 +59,7 @@ Leetcode 78 Subsets, Leetcode 39 Combination Sum: Was a tough introduction to ba
 Use recursive DFS for searching all possible subsets. "children" of a node are actually decisions
 about whether to add a node to a subset being constructed.
 
+Leetcode 22 Generate Parentheses can also be solved with backtracking.
+
 Note the DFS function where the efficiency depends on whether you are passing the current combination or subset by reference or
 by value to the DFS function. The former is also much more efficient. Both algos are slightly different.
