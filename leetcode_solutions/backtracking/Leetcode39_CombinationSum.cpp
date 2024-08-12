@@ -64,7 +64,7 @@ public:
 
 private:
     /**
-     * @brief Depth First Search to query all possible combinations summing up to target.
+     * @brief Depth First Search with backtracking to query all possible combinations summing up to target.
      * @param candidates Vector of ints of input numbers.
      * @param index Integer index of input array on which DFS is applied.
      * @param current_sum Integer sum of the current combination.

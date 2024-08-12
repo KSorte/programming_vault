@@ -48,6 +48,13 @@ Leetcode 133 Clone Graph: Important learning - Do not assume that the graph is a
 Which meant that in a BFS algorithm even if you have visited a neighbor before, the current node can still form a connection.
 Trick: BFS with a map pointing from old node to new.
 
+### Backtracking
+The difference between DFS and backtracking is that in the former, you do not unmark the cells visited after the branch
+is done. In backtracking, when you hit the base case and the recursion starts unrolling, you essentially unmark the states as you
+go up.
+These problems usually need to same resource in multiple branches of the search, needing repeated visits.
+Eg. permutations, combinations, subsets, the generate parentheses problem.
+
 Leetcode 78 Subsets, Leetcode 39 Combination Sum: Was a tough introduction to backtracking. Solution not intuitive.
 Use recursive DFS for searching all possible subsets. "children" of a node are actually decisions
 about whether to add a node to a subset being constructed.

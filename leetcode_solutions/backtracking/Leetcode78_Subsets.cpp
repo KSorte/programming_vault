@@ -55,7 +55,7 @@ public:
 
 private:
     /**
-     * @brief Depth First Search for finding all the possible subsets
+     * @brief Depth First Search with backtracking for finding all the possible subsets
      * from ith element onwards.
      * @param index Integer index of the nums from where dfs needs to be applied.
      * @param result [out] Vector of integer vectors containing all possible subsets.
