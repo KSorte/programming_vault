@@ -14,6 +14,11 @@
 
 class Solution {
 public:
+    /**
+     * @brief Return the number that appears exactly once.
+     * @param nums Vector of ints
+     * @returns Int appearing only once.
+     */
     int singleNumber(std::vector<int>& nums) {
         return std::accumulate(nums.begin(), nums.end(), 0, std::bit_xor<int>());
     }
