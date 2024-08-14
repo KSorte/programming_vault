@@ -63,3 +63,7 @@ Leetcode 22 Generate Parentheses can also be solved with backtracking.
 
 Note the DFS function where the efficiency depends on whether you are passing the current combination or subset by reference or
 by value to the DFS function. The former is also much more efficient. Both algos are slightly different.
+
+## Bit Manipulation
+Leetcode 136 Single Number and Leetcode 338 Counting Bits needed some deep thinking and pattern searching.
+136 uses XOR.
