@@ -67,3 +67,6 @@ by value to the DFS function. The former is also much more efficient. Both algos
 ## Bit Manipulation
 Leetcode 136 Single Number and Leetcode 338 Counting Bits needed some deep thinking and pattern searching.
 136 uses XOR.
+
+## Advanced Graphs
+Leetcode 743 Network Delay Time -  Solve using Dijkstra's algorithm.
