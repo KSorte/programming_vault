@@ -60,17 +60,21 @@ public:
      */
     void addNum(int num) {
         if (num > min_heap.top()) {
+            // O(logn)
             min_heap.push(num);
         } else if (num < max_heap.top()) {
+            // O(logn)
             max_heap.push(num);
         } else {
             int distance_to_min_heap = min_heap.top() - num;
             int distance_to_max_heap = num - max_heap.top();
 
             if (distance_to_max_heap >= distance_to_min_heap) {
+                // O(logn)
                 min_heap.push(num);
 
             } else {
+                // O(logn)
                 max_heap.push(num);
 
             }
@@ -79,7 +83,9 @@ public:
         // Check sizes of both heaps.
         if (min_heap.size() > max_heap.size()) {
             if (min_heap.size() - max_heap.size() >= 2) {
+                // O(logn)
                 max_heap.push(min_heap.top());
+                // O(logn)
                 min_heap.pop();
                 return;
             }
@@ -87,7 +93,9 @@ public:
 
         if (max_heap.size() > min_heap.size()) {
             if (max_heap.size() - min_heap.size() >= 2) {
+                // O(logn)
                 min_heap.push(max_heap.top());
+                // O(logn)
                 max_heap.pop();
                 return;
             }
