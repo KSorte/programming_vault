@@ -72,3 +72,9 @@ Leetcode 136 Single Number and Leetcode 338 Counting Bits needed some deep think
 
 ## Advanced Graphs
 Leetcode 743 Network Delay Time -  Solve using Dijkstra's algorithm.
+
+## Heaps
+Leetcode 295 Median From Data Stream. Very good problem to understand heaps.
+Unrelated key learning: size_t is an unsigned int. Getting size difference b/w two vectors gets tricky because of this.
+
+Leetcode 21 Merge Two Sorted Linked List in linked list section becomes exceedingly simple with heaps with same time complexity.
