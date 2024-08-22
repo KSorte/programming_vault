@@ -2,9 +2,6 @@
 With hindsight, Two Pointers, Sliding Window and Binary Search were most difficult to solve.
 However, trees, graphs and linked list problems all rely on a finite class of tricks.
 
-Slow fast pointer technique in linked list: Leetcode 141, 143(I haven't used it, one can here), and Leetcode 19 use two pointers
-fast and slow to achieve their ends. A classic technique.
-
 Problem 22 Generate Parentheses needs be revisited during Backtracking, Decision Trees, Recursion and Tree Search.
 This problem even though using a stack is more significantly belonging to one of the above groups.
 
@@ -50,7 +47,14 @@ Trick: BFS with a map pointing from old node to new.
 
 Leetcode 23 Merge K Sorted Linked Lists: Using a min heap significantly simplifies the code. But the time complexity remains O(nlogn).
 
-### Backtracking
+## Linked Lists
+Slow fast pointer technique in linked list: Leetcode 141, 143(I haven't used it, one can here), and Leetcode 19 use two pointers
+fast and slow to achieve their ends. A classic technique.
+
+Leetcode 287 Find the Duplicate Number : You won't be able to solve it if you haven't seen it before. Uses Floyd's algorithm and
+relies on two pointer technique. MEMORIZE IT.
+
+## Backtracking
 The difference between DFS and backtracking is that in the former, you do not unmark the cells visited after the branch
 is done. In backtracking, when you hit the base case and the recursion starts unrolling, you essentially unmark the states as you
 go up.
@@ -76,6 +80,6 @@ Leetcode 743 Network Delay Time -  Solve using Dijkstra's algorithm.
 ## Heaps
 Leetcode 295 Median From Data Stream. Very good problem to understand heaps.
 Unrelated key learning: size_t is an unsigned int. Getting size difference b/w two vectors gets tricky because of this.
-Make sure to understand the follow-up questions for this problem.
+MAKE SURE to understand the follow-up questions for this problem.
 
 Leetcode 21 Merge Two Sorted Linked List in linked list section becomes exceedingly simple with heaps with same time complexity.
