@@ -29,6 +29,9 @@ nullptr errors wont occur.
 Leetcode 200 Number of Islands is a very important problem asked in many coding rounds.
 It is solved with both DFS and BFS. Must read for understanding these two searches properly.
 
+Leetcode 207 Course Schedule : Very important problem. Can be solved using topological sort (BFS) or simple DFS.
+Extremely important problem. can be asked. See topological sort.
+
 Leetcode 208 Implement Trie Prefix Tree : This is a good problem for application of unique pointers as against
 raw pointers. Methods such as `make_unique()` to create new instance of unique pointer and `get()` to get raw pointers from unique ptrs are used in this solution.
 No usage of pointers lead to problems with the hashmaps since they copy the class elements and lead to
@@ -83,3 +86,8 @@ Unrelated key learning: size_t is an unsigned int. Getting size difference b/w t
 MAKE SURE to understand the follow-up questions for this problem.
 
 Leetcode 21 Merge Two Sorted Linked List in linked list section becomes exceedingly simple with heaps with same time complexity.
+
+
+## TODO
+leetcode 295 Follow-up question
+topological sort.
