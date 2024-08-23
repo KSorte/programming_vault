@@ -121,20 +121,24 @@ private:
 
 // How did I make it efficient?
 /**
- * Create the is_course_feasible vector to store flags.
+ * Create the is_course_feasible vector to store flags whether a course is feasible or not.
+ Previously, to mark that a course is feasible, its prerequisites were emptied from the dag, which is inefficient.
  * Use .find on course on dfs path set.
- * These two checks:
-        if (directed_acyclic_graph[course_index].empty()) {
-            // Course with no prerequisite
-            is_course_feasible[course_index] = true;
-            return true;
-        }
+ Previously, std::find function which is used on sequential containers was used which is naturally slow.
+ * These two checks were added which minimized the the operations for leaf nodes or courses with no prerequisites.
+    if (directed_acyclic_graph[course_index].empty()) {
+        // Course with no prerequisite
+        is_course_feasible[course_index] = true;
+        return true;
+    }
 
-        if (is_course_feasible[course_index]) {
-            // Course is doable found out previously.
-            return true;
-        }
+    if (is_course_feasible[course_index]) {
+        // Course is doable found out previously.
+        return true;
+    }
  * Creating an unordered map pointing from int to an unordered set.(Below).
+ Erasing an element from vector is slower than from an unordered set. This would make it faster.
+ (This is slower for some reason.)
  */
 
 // Using unordered set to store neighbors instead of vectors.
