@@ -22,6 +22,10 @@ public:
     int rob(std::vector<int>& nums) {
         int num_houses = nums.size();
 
+        if (num_houses == 1) {
+            return nums[0];
+        }
+
         // DP Array to store the maximum profit theoretically possible until
         // that house.
         std::vector<int> dp_array(num_houses, 0);
