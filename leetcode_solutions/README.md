@@ -88,6 +88,9 @@ MAKE SURE to understand the follow-up questions for this problem.
 Leetcode 21 Merge Two Sorted Linked List in linked list section becomes exceedingly simple with heaps with same time complexity.
 Leetcode 973 K Closest Points to Origin: The algorithm is trivial, the main learning is **optimization**.
 
+## 1 D DP
+
+Leetcode 91 Decode Ways. Excellent problem! Optimizing it was difficult. No need to use a map.
 
 ## TODO
 leetcode 295 Follow-up questions
