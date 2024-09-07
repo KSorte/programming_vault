@@ -57,6 +57,9 @@ fast and slow to achieve their ends. A classic technique.
 Leetcode 287 Find the Duplicate Number : You won't be able to solve it if you haven't seen it before. Uses Floyd's algorithm and
 relies on two pointer technique. MEMORIZE IT.
 
+Leetcode 146 LRU Cache. A good opportunity to use C++ doubly linked lists and using iterators for this list. The main challenge was
+deciding the correct data structure. Either implementing a custom linked list or using the existing one. The `splice` function is used for putting elements to the front of the list with O(1).
+
 ## Backtracking
 The difference between DFS and backtracking is that in the former, you do not unmark the cells visited after the branch
 is done. In backtracking, when you hit the base case and the recursion starts unrolling, you essentially unmark the states as you

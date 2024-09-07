@@ -74,9 +74,9 @@ private:
             curr_max = root->val;
         }
 
-        auto c1 = depth_first_search(root->left, curr_max);
-        auto c2 = depth_first_search(root->right, curr_max);
+        count += depth_first_search(root->left, curr_max);
+        count += depth_first_search(root->right, curr_max);
 
-        return c1 + c2 + count;
+        return count;
     }
 };
