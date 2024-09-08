@@ -23,6 +23,8 @@ Leetcode 100, 104, 110, 226, 543 and 572 - Easy leetcodes from the `Trees` secti
 binary tree traversal and most importantly RECURSION. Each of these problems hinge on a single trick. Some form of bfs or dfs
 The latter gives a rich understanding of recursion. Very very important set of problems.
 
+Leetcode 230 Kth Smallest Element in BST - Good BST problem. Try to optimize.
+
 Leetcode 235 Lowest Common Ancestor in BST - the key thing to understand is that the BST is valid. This helps in understanding that
 nullptr errors wont occur.
 
