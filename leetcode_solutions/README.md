@@ -94,6 +94,7 @@ Leetcode 973 K Closest Points to Origin: The algorithm is trivial, the main lear
 ## 1 D DP
 
 Leetcode 91 Decode Ways. Excellent problem! Optimizing it was difficult. No need to use a map.
+Leetcode 300 Longest Increasing Subsequence. Tough to figure out the dp array initialization. Once that is solved, problem easy.
 
 ## 2D DP
 Leetcode 1143 Longest Common Subsequence: Highly unintiuitive. DP array update step is very hard to figure out.
