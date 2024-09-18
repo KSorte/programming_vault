@@ -2,7 +2,8 @@
 # include <iostream>
 # include <queue>
 # include <vector>
-#include <cassert>  // For assert
+# include <cassert>
+
 /*
  * Problem: Given a password (string of lowercase English letters), modify it
  * so that the number of vowels is equal to the number of consonants.
@@ -54,9 +55,6 @@ public:
 
         int num_vowels = 0, num_consonents = 0;
 
-        std::vector<int> vowel_indices;
-        std::vector<int> consonent_indices;
-
         // Iterate over password.
         int index = 0;
         for (const char & c : password){
@@ -86,10 +84,13 @@ public:
 
         int num_operations = 0;
         if (num_consonents == num_vowels){
+            // Already balanced.
             num_operations = 0;
         } else if(num_vowels > num_consonents) {
+            // Change required number of vowels to consonents.
             num_operations = (num_vowels - num_consonents)/2;
         } else {
+            // Change required number of consonents to vowels and count number of operations.
             int num_consonents_to_change = (num_consonents - num_vowels)/2;
             for (int i = 0; i < num_consonents_to_change; i++) {
                 auto consonent = consonent_distance.top();
