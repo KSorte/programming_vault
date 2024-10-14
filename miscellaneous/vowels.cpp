@@ -55,12 +55,29 @@ Notes:
 1. The query indices are 1-based.
 2. You need to output the result for each query in the same order as the queries.
 */
-// Helper function to check if a character is a vowel
+
+
+/**
+ * @brief Checks if a character is a vowel.
+ *
+ * @param c The character to check.
+ * @returns True if the character is a vowel ('a', 'e', 'i', 'o', 'u'), false otherwise.
+ */
 bool isVowel(char c) {
     return (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u');
 }
 
-// Function to count strings that start and end with vowels in given intervals
+/**
+ * @brief Counts the number of strings that start and end with a vowel in a given range.
+ *
+ * For each query in the format "l-r", this function counts how many strings in the
+ * specified range [l, r] of the input array start and end with a vowel.
+ *
+ * @param strArr A vector of strings to process.
+ * @param queries A vector of queries, where each query specifies a range in the format "l-r".
+ * @returns A vector of integers where each element represents the count of strings
+ *          that start and end with a vowel for the corresponding query.
+ */
 std::vector<int> hasVowels(const std::vector<std::string>& strArr, const std::vector<std::string>& queries) {
     std::vector<int> result;
     for (const auto& query : queries) {
