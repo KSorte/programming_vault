@@ -82,6 +82,7 @@ public:
      * @brief Convolve matrix along rows using constant filter K [-1, 0, 1].
      */
     void convolve_rows_with_constant_filter_K() {
+        // TODO(KSorte): Why not start from row 0?
         for (int i = 1; i < rows - 1; i ++) {
             for (int j = 1; j < columns - 1; j ++) {
                 // Convolve row-wise with constant filter K = [-1, 0, 1].
@@ -96,6 +97,7 @@ public:
      * @brief Convolve matrix along columns using constant filter K [-1, 0, 1].
      */
     void convolve_columns_with_constant_filter_K() {
+        // TODO(KSorte): Why not start from column 0?
         for (int i = 1; i < rows - 1; i ++) {
             for (int j = 1; j < columns -1; j ++) {
                 // Convolve column-wise with constant filter K = [-1, 0, 1].
@@ -223,3 +225,52 @@ int main() {
         print_int16_t_matrix(convolve.result.Dy, number_of_rows, number_of_cols);
     }
 }
+
+/*
+Three improvements:
+I removed all the if statements from the convolution function. So, the border cells do not undergo the convolution. I also
+removed the max -min calculation from the function. That is done separately by iterating over the result again.
+This might seem inefficient, but the core convolution functions now have a singular responsibility.
+Implemented a row major matrix improving Cache efficiency. So each row is not stored in a separate vector, reducing the chances of a cache miss.
+The input matrix is supposed to be unsigned char as per the requirements. Since the filtered output can have negative values,
+DX and Dy matrices are of type int16_t to accomodate that.
+
+Performance comparison between the two implementations using time in seconds:
+- 1500 x 1500 matrix
+
+   Previous algorithm
+   Row-wise convolution time: 0.0235409 seconds
+   Column-wise convolution time: 0.0259969 seconds
+
+   Optimized algorithm
+   Row-wise convolution time: 0.00684478 seconds
+   Column-wise convolution time: 0.00712731 seconds
+
+- 10000 x 10000 matrix
+
+   Previous algorithm
+   Row-wise convolution time: 1.17101 seconds
+   Column-wise convolution time: 1.28534 seconds
+
+   Optimized algorithm
+   Row-wise convolution time: 0.326778 seconds
+   Column-wise convolution time: 0.329209 seconds
+
+- 40000 x 40000 matrix
+
+   Previous algorithm
+   Row-wise convolution time: 17.0215 seconds
+   Column-wise convolution time: 18.2048 seconds
+
+   Optimized algorithm
+   Row-wise convolution time: 5.0714 seconds
+   Column-wise convolution time: 4.94745 seconds
+
+Considerations:
+While having a row major matrix drastically improves cache efficiency for the row-wise convolution, cache miss still occur for
+     column-wise convolutions because this operation needs to access element in adjacent rows. For large row size, cache              misses would happen with a certainty.
+       2.  To improve cache utilization for column wise convolution, blocking can be implemented that divides the matrix into smaller      sub-blocks that fit into the cache more effectively.
+   3. Random matrix generation and max-min calculations are the only two expensive operations. The latter is done separately, so              that the convolutions functions become light-weight.
+
+
+*/

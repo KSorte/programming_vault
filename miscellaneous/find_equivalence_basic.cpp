@@ -5,7 +5,7 @@
 #include <vector>
 
 /*
-    At Aurora, following is a brief description of testing the autonomous behavior.
+    Following is a brief description of testing the autonomous behavior.
     A left operator sits behind the wheel, ready to take over.
     A right operator notes down behaviors, events in short notes or even words.
     For example

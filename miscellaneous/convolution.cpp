@@ -267,3 +267,9 @@ int main() {
         }
     }
 }
+
+/*
+ If conditions in for loops are very bad in this case as they break CPU cache pipelines. It doesn’t matter in typical general software, however with numerical repeated computes, how fast you can crunch data, is a function of how filled your CPU cache lines are. An ideal way would have been to unroll these boundary conditions explicitly before the main [1,rows-1]x[1, cols-1] for loop.
+- Vector of vector allocates each row in a different memory location, this breaks CPU cache lines for every row access. A much faster way (esp for bigger rows and cols values) is to allocate one vector but then view it as [i*cols + j] indices.
+- Somewhat surprisingly, your input matrix is int typed but Dx/Dy are unsigned char. Please note that if input data is initialized to numbers in range [0, 255], the difference would be the range [-255, 255] and it can not fit in unsigned char. You should have used int16 for Dx/Dy.
+*/

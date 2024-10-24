@@ -5,7 +5,20 @@
   Initially I thought of using a map to store letter associations with numbers. A better option
   is to work on the ASCII values of characters themselves.
 
-  Basic steps for encryption or decryption: str = string, pwd = password
+  Problem Description:
+  In this problem you will write a program to "encrypt" and "decrypt" strings of text using a "password".
+  The cryptogram will be based on letter rotation, with the password indicating how far each letter of the plain text should be rotated.
+  The letter 'a' rotates by 0, 'b' by 1, 'c' by 2, and so forth. For example, 'z' rotated by 'b' (1) would become 'a' again, since in rotation,
+  'z' is followed by 'a' again.
+  For example, if the password is "abc" and the plain text is "aaaaaa", then the encrypted text is "abcabc", with each letter of the password
+  effecting one letter of plain text. The password is just repeated as long as necessary to encrypt all the text.
+  Only letters should be encrypted, and they should maintain their case. So password "abc" would encrypt 'Hello World!' as 'Hfnlp Yosnd!'.
+  Passwords are not case-sensitive, and characters in the password that are not letters are ignored/skipped/as if they were not there.
+  A blank password leaves the plain text unchanged.
+  Write two functions: encrypt and decrypt. Each function will take an input string and a password string, and will return the encrypted or
+  decrypted string output.
+
+Basic steps for encryption or decryption: str = string, pwd = password
   1. Normalize the password: remove non-alphabets and convert upper case to lower case.
   (Or lower case to upper case. Any approach works.)
   n = pwd.size()

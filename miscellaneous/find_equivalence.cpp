@@ -6,7 +6,7 @@
 #include <vector>
 
 /*
-    At Aurora, following is a brief description of testing the autonomous behavior.
+    Following is a brief description of testing the autonomous behavior.
     A left operator sits behind the wheel, ready to take over.
     A right operator notes down behaviors, events in short notes or even words.
     For example
@@ -29,6 +29,12 @@
         Add the group label into the set.
 
     If the two sets are equal, then the sentences are equivalent.
+
+    Union Find Resources:
+
+    Union Find: https://www.youtube.com/watch?v=0jNmHPfA_yE&t=507s
+    Path Compression: https://www.youtube.com/watch?v=VHRhJWacxis
+    Kruskal's Algorithm: https://www.youtube.com/watch?v=JZBQLXgSGfs
 */
 
 // TODO(KSorte): Use Smart Pointers.
@@ -173,6 +179,8 @@ private:
                 }
 
                 // Assign the root of second as the child of root of first.
+                // TODO(KSorte): What if the root of the second child is made the child of the ROOT of the first child
+                // and not to the first child? This would make the paths smaller.
                 first->add_child(root_second_word);
                 continue;
             }
@@ -181,12 +189,14 @@ private:
             if (first_exists == map_of_existing_words.end()) {
                 // If first doesnt exist and second does.
                 auto first = new ConnectionNode(first_word);
+                // Get pointer of second.
                 auto second = map_of_existing_words[second_word];
                 second->add_child(first);
                 map_of_existing_words[first_word] = first;
             } else if (second_exists == map_of_existing_words.end()) {
                 // If first exists, but second doesn't.
                 auto second = new ConnectionNode(second_word);
+                // Get pointer to first.
                 auto first = map_of_existing_words[first_word];
                 first->add_child(second);
                 map_of_existing_words[second_word] = second;
@@ -229,9 +239,9 @@ int main() {
     auto result = note_equivalence_finder.is_equivalent(sentence5, sentence6);
 
     if (result) {
-        std::cout<<"Sentence are Equivalent"<<"\n\n";
+        std::cout<<"Sentence are 5 and 6 Equivalent"<<"\n\n";
     } else {
-        std::cout<<"Sentences are not Equivalent"<<"\n\n";
+        std::cout<<"Sentences 5 and 6 are not Equivalent"<<"\n\n";
     }
 
     // Create nodes for testing find.
