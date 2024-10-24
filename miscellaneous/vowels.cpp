@@ -59,7 +59,6 @@ Notes:
 
 /**
  * @brief Checks if a character is a vowel.
- *
  * @param c The character to check.
  * @returns True if the character is a vowel ('a', 'e', 'i', 'o', 'u'), false otherwise.
  */

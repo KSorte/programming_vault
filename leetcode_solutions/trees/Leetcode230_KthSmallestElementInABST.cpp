@@ -9,9 +9,14 @@
         k1, val1 = DFS(k, root.left)
         if k1 == k : return k1, val1
 
-        k2, val2 = DFS(k - k1, root.right)
+        if (k1 + 1 == k) {
+            return root.val;
+            return k;
+        }
 
-        return k2, val2
+        k2, val2 = DFS(k - k1 - 1, root.right)
+
+        return k1 + k2 + 1, val2
 
     Idea:
     the smallest element is the left most child of the left most subtree.
