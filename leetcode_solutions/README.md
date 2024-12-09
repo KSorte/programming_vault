@@ -52,6 +52,9 @@ Trick: BFS with a map pointing from old node to new.
 
 Leetcode 23 Merge K Sorted Linked Lists: Using a min heap significantly simplifies the code. But the time complexity remains O(nlogn).
 
+Leetcode 684 Redundant Connection
+The find method was tricky. Pay especial attention to it.
+
 ## Linked Lists
 Slow fast pointer technique in linked list: Leetcode 141, 143(I haven't used it, one can here), and Leetcode 19 use two pointers
 fast and slow to achieve their ends. A classic technique.
