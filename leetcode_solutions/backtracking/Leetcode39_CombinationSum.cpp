@@ -101,7 +101,7 @@ private:
             target,
             result);
 
-        // Do not add number to the combination.
+        // Do not add number to the combination and add the next one.
         current_combination.pop_back();
         current_sum -= candidates[index];
         depth_first_search(
@@ -111,8 +111,6 @@ private:
             current_combination,
             target,
             result);
-
-
     }
 };
 

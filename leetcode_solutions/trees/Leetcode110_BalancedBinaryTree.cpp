@@ -5,7 +5,8 @@
 /*
 
 Leetcode 110 Balanced Binary Tree
-Given the root of a binary tree, invert the tree, and return its root.
+Given a binary tree, determine if it is height-balanced.
+https://leetcode.com/problems/balanced-binary-tree/description/
 
 Solution similar to solution of Leetcode 543
 

@@ -7,32 +7,15 @@ This problem even though using a stack is more significantly belonging to one of
 
 Leetcode 128 - Longest Consecutive Sequence : Was a hard crack, the trick is very nuanced and may not strike immediately.
 
-Leetcode 853 : Did not need the usage of stacks. The trick did not strike organically.
+Leetcode 853 Car Fleet : Did not need the usage of stacks. The trick did not strike organically.
 
-Leetcode 84 - Did not need stacks.
-
-Leetcode 543 Diameter of Binary Tree and Leetcode 110 Balanced Binary Tree used DFS with recursion. Very peculiar technique.
+Leetcode 84 Largest Rectangle in Histogram - Did not need stacks.
 
 Leetcode 33 Search in Rotated Sorted array - From Blind 75. Took a long time to crack.
 
 Leetcode 424 Longest Repeating Character Replacement: Most important from the sliding window section;
 Count of the most occuring letter after moving the left pointer need not be recalculated.
 It is recalculated currently by iterating over the map.
-
-Leetcode 100, 104, 110, 226, 543 and 572 - Easy leetcodes from the `Trees` section. An excellent set of problems for understanding
-binary tree traversal and most importantly RECURSION. Each of these problems hinge on a single trick. Some form of bfs or dfs
-The latter gives a rich understanding of recursion. Very very important set of problems.
-
-Leetcode 230 Kth Smallest Element in BST - Good BST problem. Try to optimize.
-
-Leetcode 235 Lowest Common Ancestor in BST - the key thing to understand is that the BST is valid. This helps in understanding that
-nullptr errors wont occur.
-
-Leetcode 200 Number of Islands is a very important problem asked in many coding rounds.
-It is solved with both DFS and BFS. Must read for understanding these two searches properly.
-
-Leetcode 207, 210 Course Schedule I & II : Very important problem. Can be solved using topological sort (BFS) or simple DFS.
-Extremely important problem. can be asked. See topological sort. Implementing topological sort is a must for solving problem 2.
 
 Leetcode 208 Implement Trie Prefix Tree : This is a good problem for application of unique pointers as against
 raw pointers. Methods such as `make_unique()` to create new instance of unique pointer and `get()` to get raw pointers from unique ptrs are used in this solution.
@@ -46,14 +29,21 @@ Leetcode 208. It employs a very canny implementation of DFS. It is worth trying 
 Leetcode 143 Reorder List: Important learning - When dealing with pointers use while loops using nullptr conditions rather than
 for loops which can cause nullptr errors.
 
-Leetcode 133 Clone Graph: Important learning - Do not assume that the graph is a tree. This problem the graph was bidirectional.
-Which meant that in a BFS algorithm even if you have visited a neighbor before, the current node can still form a connection.
-Trick: BFS with a map pointing from old node to new.
-
 Leetcode 23 Merge K Sorted Linked Lists: Using a min heap significantly simplifies the code. But the time complexity remains O(nlogn).
 
-Leetcode 684 Redundant Connection
-The find method was tricky. Pay especial attention to it.
+## Trees
+Leetcode 100, 104, 110, 226, 543 and 572 - Easy leetcodes from the `Trees` section. An excellent set of problems for understanding
+binary tree traversal and most importantly RECURSION. Each of these problems hinge on a single trick. Some form of bfs or dfs
+The latter gives a rich understanding of recursion. Very very important set of problems.
+
+Leetcode 230 Kth Smallest Element in BST - Good BST problem. Try to optimize.
+
+Leetcode 235 Lowest Common Ancestor in BST - the key thing to understand is that the BST is valid. This helps in understanding that
+nullptr errors wont occur.
+
+Leetcode 543 Diameter of Binary Tree and Leetcode 110 Balanced Binary Tree used DFS with recursion. Very peculiar technique.
+
+Leetcode 572 Subtree of Another Tree - Multiple recursions occuring in the same problem. Interesting read.
 
 ## Linked Lists
 Slow fast pointer technique in linked list: Leetcode 141, 143(I haven't used it, one can here), and Leetcode 19 use two pointers
@@ -81,12 +71,26 @@ Leetcode 22 Generate Parentheses can also be solved with backtracking.
 Note the DFS function where the efficiency depends on whether you are passing the current combination or subset by reference or
 by value to the DFS function. The former is also much more efficient. Both algos are slightly different.
 
-## Bit Manipulation
-Leetcode 136 Single Number and Leetcode 338 Counting Bits needed some deep thinking and pattern searching.
-136 uses XOR.
+## Graphs
+Leetcode 200 Number of Islands is a very important problem asked in many coding rounds.
+It is solved with both DFS and BFS. Must read for understanding these two searches properly.
+
+Leetcode 207, 210 Course Schedule I & II : Very important problem. Can be solved using topological sort (BFS) or simple DFS.
+Extremely important problem. can be asked. See topological sort. Implementing topological sort is a must for solving problem 2.
+
+Leetcode 133 Clone Graph: Important learning - Do not assume that the graph is a tree. This problem the graph was bidirectional.
+Which meant that in a BFS algorithm even if you have visited a neighbor before, the current node can still form a connection.
+Trick: BFS with a map pointing from old node to new.
+
+Leetcode 684 Redundant Connection
+The find method was tricky. Pay especial attention to it.
 
 ## Advanced Graphs
 Leetcode 743 Network Delay Time -  Solve using Dijkstra's algorithm.
+
+## Bit Manipulation
+Leetcode 136 Single Number and Leetcode 338 Counting Bits needed some deep thinking and pattern searching.
+136 uses XOR.
 
 ## Heaps
 Leetcode 295 Median From Data Stream. Very good problem to understand heaps.

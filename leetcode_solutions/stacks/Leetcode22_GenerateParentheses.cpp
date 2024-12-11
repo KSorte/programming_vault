@@ -60,6 +60,5 @@ private:
                 num_closed --;
                 current_combination.pop_back();
             }
-
     }
 };

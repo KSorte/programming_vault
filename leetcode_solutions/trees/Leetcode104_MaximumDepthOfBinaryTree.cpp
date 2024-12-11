@@ -4,9 +4,10 @@
 
 /*
 
-Leetcode 102 Binary Tree Level Order Traversal
-Given the root of a binary tree, return the level order traversal of its nodes' values.
-(i.e., from left to right, level by level).
+Leetcode 104 Maximum Depth of Binary Tree
+Given the root of a binary tree, return its maximum depth.
+
+A binary tree's maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
 
 The idea is to modify BFS slightly.
 In original BFS, we pop one element of the queue at a time
@@ -100,7 +101,7 @@ public:
             // If queue size > 0, then next level exists, increment depth.
             if (queue.size() > 0) {depth ++;}
         }
-        return depth;;
+        return depth;
     }
 
     // Using RECURSION
